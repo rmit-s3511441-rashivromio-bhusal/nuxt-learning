@@ -3,8 +3,9 @@
 
     <h1>Search </h1>
     <br/>
-    <form>
-<input placeholder="Enter Artist Name" v-model="search" autofocus/>
+    <form @submit.prevent="submit">
+<input placeholder="Enter Artist Name" 
+v-model="search" autofocus/>
     </form>
 
 
@@ -26,9 +27,20 @@ export default {
     return{
       search: ''
     }
+  },
+  methods: {
+    submit(event){
+     this.$router.push(`results/${this.search}`);
+    }
   }
 }
 </script>
+* {
+  text-align: center;
+}
+h1{
+  padding: 20px;
+}
 
 <style>
 </style>
