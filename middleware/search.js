@@ -8,4 +8,3 @@ export default function( {params, store} ) {
     .then((response) => console.log(response));
 }
 
-
